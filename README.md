@@ -9,6 +9,8 @@ run `make clean && make qemu-vscode` once the gdb server has started, it will wa
 navigate to your debug console in VSCode and select gdb from the gear icon. You should see an "Attach to QEMU" profile 
 available. When you run this, you should connect to the gdb server. Go ahead and try to set up breakpoints and whatnot. 
 
+备注：现在有两个配置，`attach to QEMU` 需要安装 `native debug` 插件，`(gdb) connect QEMU` 不需要，而且后者可以看到寄存器。前者在调试窗口可以直接输入 gdb 命令，后者需要输入 -exec gdb命令。
+
 ## Compiling with Docker (if you want to)
 If you are already a linux power user, you can compile natively with docker. You can compile xv6 with docker my running `make docker`. That will run an ubuntu 18.04 container that will compile xv6.img for you. I would not recommend relying on this unless you are already profcient with docker.
 
